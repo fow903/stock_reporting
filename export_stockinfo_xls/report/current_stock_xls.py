@@ -54,6 +54,7 @@ class StockReportXls(ReportXlsx):
                 'name': product.name,
                 'category': product.categ_id.name,
                 'cost_price': product.standard_price,
+                'costo': product.new_cost,
                 'available': available_qty,
                 'virtual': product.with_context({'warehouse': warehouse}).virtual_available,
                 'incoming': product.with_context({'warehouse': warehouse}).incoming_qty,
